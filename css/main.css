@@ -100,6 +100,7 @@ html {
   background-color: #000000;
   height: 100%;
   width: 100%;
+  font-size: 16px;
 }
 
 body {
@@ -107,29 +108,68 @@ body {
   padding: 2em;
   font-size: 1.25em;
   height: 100%;
+  display: flex;
+  justify-content: center;
+}
+.flex-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-flow: row wrap;
+  max-width: 1200px;
+}
+header, footer {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+}
+header h1 {
+  color: #ffa500;
+  font-size: 3.5em;
+}
+
+.intro {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  font-size: 1.5em;
+  color: #ffd700;
 }
 
 .wrapper {
-  /*add display:flex and set justify-content to space-between*/
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
   align-items: center;
   font-weight: 700;
-
+  border-top: 2px solid #ffa500;
+  border-bottom: 2px solid #ffa500;
 }
 
 .div-1, .div-2, .div-3 {
-  /*give the divs a width of 30%, add display:flex, set justify-content and align-items to center*/
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
-  color: #fff;
+  color: #ff1493;
   line-height: 1.5em;
-  font-size: 1.6em;
+  font-size: 1em;
   background-color: #000000;
+  width: 100%;
 }
 
+.div-1, .div-2 {
+  border-bottom: 1px solid #ffa500;
+}
+
+.contact {
+  padding-top: 30px;
+}
+
+.contact a {
+  padding: 30px 20px 0 0;
+}
+
+}
 
 
 /* ==========================================================================
@@ -217,12 +257,23 @@ body {
   .div-1, .div-2, .div-3 {
     flex-basis: 30%;
   }
-  .div-2, .div-3 {
-    border-left: 1px solid #fff;
-    padding-left: 50px; 
+  .div-2 p {
+    border-left: 1px solid #ffa500;
+    border-right: 1px solid #ffa500;
+    padding-left: 50px;
   }
 
+/*-----------TABLET--------------*/
+@media (min-width: 768px){
+  .div-1, .div-2 {
+    border-bottom: none;
+  }
 
+/*-------------PRINT----------------*/
+  @media print,
+         (-webkit-min-device-pixel-ratio: 1.25),
+         (min-resolution: 1.25dppx),
+         (min-resolution: 120dpi) {
     /* Style adjustments for high resolution devices */
 }
 
