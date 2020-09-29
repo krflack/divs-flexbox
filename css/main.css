@@ -111,28 +111,24 @@ body {
 
 .wrapper {
   /*add display:flex and set justify-content to space-between*/
-  font-weight: 700;
   display: flex;
+  flex-flow: row wrap;
   justify-content: space-between;
+  align-items: center;
+  font-weight: 700;
+
 }
 
 .div-1, .div-2, .div-3 {
   /*give the divs a width of 30%, add display:flex, set justify-content and align-items to center*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
   color: #fff;
   line-height: 1.5em;
   font-size: 1.6em;
   background-color: #000000;
-  display: flex;
-  width: 30%;
-  justify-content: center;
-  align-items: center;
-  padding: 10px;
 }
-.div-2 {
-  border-left: 3px #fff;
-  border-right: 3px #fff;
-}
-
 
 
 
@@ -216,10 +212,17 @@ body {
    Modify as content requires.
    ========================================================================== */
 
-@media print,
-       (-webkit-min-device-pixel-ratio: 1.25),
-       (min-resolution: 1.25dppx),
-       (min-resolution: 120dpi) {
+/*-----------DESKTOP-------------*/
+@media all and (min-width: 1200px) {
+  .div-1, .div-2, .div-3 {
+    flex-basis: 30%;
+  }
+  .div-2, .div-3 {
+    border-left: 1px solid #fff;
+    padding-left: 50px; 
+  }
+
+
     /* Style adjustments for high resolution devices */
 }
 
